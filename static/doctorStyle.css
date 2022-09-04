@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+   
+}
+
+header{
+    background-color: skyblue;
+    height: 54px;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:2rem;
+   
+
+}
+nav ul li{
+    text-decoration: none;
+    text-align: center;
+    list-style: none;
+    margin-top: 8px;
+   
+}
+nav ul li a{
+ 
+    font-size: 2rem;
+    text-decoration: none;
+}
+nav ul li a:hover{
+ 
+    color:antiquewhite;
+   
+}
+#inp{
+    position: absolute;
+    right: 5rem;
+}
+#query{
+    width: 15rem;
+    height: 2rem;
+    border: 0px ;
+    border-radius: 3px;
+}
+#submit{
+    color: white;
+    height: 2rem;
+    width: 3rem;
+    border: 0px;
+    border-radius: 3px;
+    background-color: rgb(66, 66, 113);
+    transition: all 0.1s ease-in-out;
+}
+#submit:hover{
+    background-color: rgb(38, 28, 113);
+}
+
+
+  
+
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ 
+    margin:23px;
+    padding: 44px;
+    
+
+}
+
+.box1{
+   
+    background-color:grey;
+    height: 350px;
+    width:90%;
+    margin:13px;
+    position: relative;
+    cursor: pointer;
+}
+.box1 img{
+    height:200px;
+    /* width: 180px; */
+    position: absolute;
+    top:4rem;
+    left:1rem;
+    border-radius: 12px;
+}
+.box1 button{
+    color: white;
+    position: absolute;
+    top: 9rem;
+    right: 1.5rem;
+    height: 3rem;
+    width: 9rem;
+    border: 0px;
+    font-size: 1rem;
+    border-radius: 3px;
+    background-color: rgb(23, 84, 150);
+    transition: all 0.1s ease-in-out;
+}
+.box button:hover{
+    background-color: rgb(19, 74, 99);
+}
+.key ul{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    left: 21rem;
+    top: 5rem;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    
+    
+}
+.key li{
+    list-style: none;
+}
+.value ul{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    left: 30rem;
+    top: 6.5rem;
+    
+    height: 10.5rem;
+    justify-content: end;
+    gap: 6px;
+}
+.value li{
+    list-style: none;
+}

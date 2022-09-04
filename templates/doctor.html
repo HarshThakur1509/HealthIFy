@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors</title>
+    <link rel="stylesheet" href="static/doctorStyle.css">
+</head>
+<body>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="{% url 'doctor' %}">Doctors</a></li>
+            <li><a href="">Medical History</a></li>
+            <li>
+              
+              <div id="inp">
+                <form method="POST" action = "{% url 'doctor' %}" role="search">
+                  {% csrf_token %}
+            <input type="search" name="query" id="query" placeholder="Search">
+            <input type="submit" value="Search" id="submit">
+                </form>
+        </div>
+            </li>
+          </ul>
+
+          
+        </nav>
+      </header>
+
+
+
+    <div class="box">
+      {% for d in doc %}
+      
+     <div class="box1" >
+         <img src="{{d.image}}" alt="">
+         <div class="info1">
+           
+            <div class="key"><ul>
+            <li><h1> {{d}} </h1> </li>
+            <li>Qualification :</li>
+            <li>Designation :</li>
+            <li>Email :</li>
+            <li>Specializtion :</li>
+            <li>Time :</li>
+            <li>Fees :</li></ul></div>
+            <div class="value"><ul>
+            <li> {{d.qualification}} </li>
+            <li> {{d.designation}} </li>
+            <li> {{d.email}} </li>
+            <li> {{d.specialzation}} </li>
+            <li> {{d.time}} </li>
+            <li> {{d.fees}} </li></ul></div>
+         </div>
+         <button onclick="fun()">Book an appointment
+         </button>
+     </div>
+     {% endfor %}
+         
+    
+    </div>
+    <script>
+      function fun(){
+        alert("Your appointment has been fixed!!")
+      }
+
+    </script>
+</body>
+</html>

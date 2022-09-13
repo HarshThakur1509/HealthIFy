@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from datetime import datetime
 from django.contrib import messages
-from home.models import Doctors
+from home.models import Doctors, History
 from django.contrib.auth.models import User
 from django.contrib.auth import logout, login, authenticate
 from django.contrib.auth.forms import UserCreationForm
@@ -23,8 +23,23 @@ def doctor(request):
         doc = Doctors.objects.filter(ser)
         return render(request, 'doctor.html', {'doc': doc})
     else:
-        return render(request, 'doctor.html', {})
+        doc = Doctors.objects.all()
+        return render(request, 'doctor.html', {'doc': doc})
 
+
+def history(request):
+    if request.method == 'POST':
+        
+        disc = request.POST['med']
+        create = History.objects.create(user = request.user ,disc = disc)
+        create.save()
+        return redirect('/medical')
+    medi = History.objects.all()
+    return render(request, 'history.html', {'medi': medi})
+
+def medical(request):
+    medi = History.objects.all()
+    return render(request, 'medical.html', {'medi': medi})
 
 def loginUser(request):
     if request.method == "POST":

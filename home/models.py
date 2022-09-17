@@ -18,7 +18,7 @@ class Doctors(models.Model):
         return self.name
     
 class History(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
     disc = models.TextField(blank=True)
     
    

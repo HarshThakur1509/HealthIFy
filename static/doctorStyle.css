@@ -134,3 +134,7 @@ nav ul li a:hover{
 .value li{
     list-style: none;
 }
+
+form textarea::placeholder{
+    
+}

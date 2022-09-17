@@ -1,13 +1,18 @@
+from dataclasses import field
 from django.shortcuts import render, redirect
+from django.http import HttpResponseRedirect
 from datetime import datetime
 from django.contrib import messages
-from home.models import Doctors
+from home.models import Doctors, History
+from .forms import HistoryForm
 from django.contrib.auth.models import User
 from django.contrib.auth import logout, login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.db.models import Q
 
 from home.models import Doctors 
+
+
 
 def index(request):
     if request.user.is_anonymous:
@@ -23,7 +28,25 @@ def doctor(request):
         doc = Doctors.objects.filter(ser)
         return render(request, 'doctor.html', {'doc': doc})
     else:
-        return render(request, 'doctor.html', {})
+        doc = Doctors.objects.all()
+        return render(request, 'doctor.html', {'doc': doc})
+
+
+def history(request):
+    
+    his = History.objects.get(user = request.user)
+    form = HistoryForm(request.POST or None, instance=his)
+    if request.method == "POST":
+        
+        
+        if form.is_valid():
+            
+            form.save()
+            
+            return redirect('/')
+    
+   
+    return render(request, 'history.html', {'form': form})
 
 
 def loginUser(request):

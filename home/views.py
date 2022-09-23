@@ -10,7 +10,7 @@ from django.contrib.auth import logout, login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.db.models import Q
 
-from home.models import Doctors 
+
 
 
 

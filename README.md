@@ -1,12 +1,17 @@
 # HealthIFy
 
 This is a healthcare application built with Django. It allows users to schedule appointments with local doctors and maintain a record of their medical history.
+![HomePage](https://github.com/HarshThakur1509/HealthIFy/assets/89213009/90de6170-a288-4393-b0f2-04ffee4e4c72)
+
 
 ## Features
 
 - **Find Local Doctors:** Browse through a list of local doctors and choose the one that suits your needs.
 - **Book Appointments:** Schedule appointments with your chosen doctor at a convenient time.
+ ![Doctors](https://github.com/HarshThakur1509/HealthIFy/assets/89213009/80203e68-aee6-4aa0-98cc-a891bb9da1d1)
 - **Medical History:** Keep a record of your medical history on your profile for easy reference.
+ ![History](https://github.com/HarshThakur1509/HealthIFy/assets/89213009/e12ad8b2-b848-4564-9142-7ad73978ef93)
+
 
 ## Getting Started
 

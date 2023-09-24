@@ -40,7 +40,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 * **Harsh Thakur** - *Initial work* - [Harsh Thakur](https://github.com/HarshThakur1509)
 
-See also the list of [contributors](https://github.com/yourname/yourproject/contributors) who participated in this project.
+* **Rohit Gupta** - *Frontend* - [Rohit Gupta](https://github.com/RohitGupta1235)
 
 ## License
 
